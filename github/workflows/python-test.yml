@@ -1,0 +1,23 @@
+name: Python Tests
+on:
+  push:
+    branches:
+-main
+  jobs:
+  teste:
+    runs-on:ubuntu-latest
+  steps:
+
+-name:Baixar codigo
+user:actions/checkout@v4
+-nome:instalar Python
+uses: actions/setup-python@v5
+  with:
+    python-version:'3.11'
+
+  -name:Instalar pytest
+  run: pip install pytest
+
+  -name:Executar testes
+  run: pytest
+  
